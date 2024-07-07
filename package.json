@@ -19,7 +19,7 @@
   "main": "src/app.js",
   "scripts": {
     "start": "node src/app.js",
-    "build": "react-scripts build",
+    "build": "",
     "dev": "nodemon app.js"
   },
   "author": "",
