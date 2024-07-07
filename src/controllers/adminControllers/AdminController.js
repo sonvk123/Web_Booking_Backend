@@ -8,10 +8,10 @@ const Room = require("../../models/RoomModel");
 const UserModel = require("../../models/UserModel");
 const TransactionModel = require("../../models/TransactionModel");
 
-const DATA_PATH_Hotle = "../../DataHotels/hotels.json";
-const DATA_PATH_Room = "../../DataHotels/rooms.json";
+const DATA_PATH_Hotles = path.join("src", "DataHotels", "hotels.json");
+const DATA_PATH_Room = path.join("src", "DataHotels", "rooms.json");
 
-const data_Hotles = JSON.parse(fs.readFileSync(DATA_PATH_Hotle, "utf8"));
+const data_Hotles = JSON.parse(fs.readFileSync(DATA_PATH_Hotles, "utf8"));
 const data_Rooms = JSON.parse(fs.readFileSync(DATA_PATH_Room, "utf8"));
 
 // thêm Hotels vào trong database
