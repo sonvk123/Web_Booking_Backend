@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const bodyParser = require("body-parser");
 
-const connect = require("./database/database");
+const connect = require("./src/database/database");
 
 const app = express();
 
@@ -27,7 +27,7 @@ const LogRoute = require("./routes/ClientRouter/LogRoute");
 
 app.use(
   "/images",
-  express.static(path.join(__dirname, "DataAssignment02/CityImage"))
+  express.static(path.join(__dirname, "DataHotels/CityImage"))
 );
 
 // Admin app
