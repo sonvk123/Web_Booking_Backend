@@ -4,7 +4,7 @@ const cors = require("cors");
 
 const bodyParser = require("body-parser");
 
-const connect = require("./src/database/database");
+const connect = require("./database/database");
 
 const app = express();
 
