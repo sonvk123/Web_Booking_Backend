@@ -27,7 +27,7 @@ const LogRoute = require("./routes/ClientRouter/LogRoute");
 
 app.use(
   "/images",
-  express.static(path.join(__dirname, "DataHotels/CityImage"))
+  express.static(path.join(__dirname, "src/DataHotels/CityImage"))
 );
 
 // Admin app
