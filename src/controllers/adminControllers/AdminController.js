@@ -8,8 +8,8 @@ const Room = require("../../models/RoomModel");
 const UserModel = require("../../models/UserModel");
 const TransactionModel = require("../../models/TransactionModel");
 
-const DATA_PATH_Hotle = "../src/Backend/DataHotels/hotels.json";
-const DATA_PATH_Room = "../src/Backend/DataHotels/rooms.json";
+const DATA_PATH_Hotle = "../../DataHotels/hotels.json";
+const DATA_PATH_Room = "../../DataHotels/rooms.json";
 
 const data_Hotles = JSON.parse(fs.readFileSync(DATA_PATH_Hotle, "utf8"));
 const data_Rooms = JSON.parse(fs.readFileSync(DATA_PATH_Room, "utf8"));
