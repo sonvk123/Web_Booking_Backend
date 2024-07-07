@@ -14,7 +14,23 @@ const PORT = process.env.PORT || 5000;
 
 require("dotenv").config();
 
-app.use(cors());
+require("dotenv").config();
+
+const urlAdmin = process.env.URL_ADMIN;
+const urlClient = process.env.URL_CLIENT;
+
+// Đặt header Access-Control-Allow-Credentials và Access-Control-Allow-Origin khi cần
+const corsOptions = {
+  origin: [
+    "http://localhost:3000",
+    "http://localhost:3001",
+    urlAdmin,
+    urlClient,
+  ],
+  credentials: true,
+};
+
+app.use(cors(corsOptions));
 
 app.use(bodyParser.json()); // Cho phép Express đọc dữ liệu từ JSON body
 

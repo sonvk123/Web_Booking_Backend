@@ -1,7 +1,10 @@
 const mongoose = require("mongoose");
 
-const urlDatabase =
-  "mongodb+srv://sonnnfx21638:sonbn2k123@cluster0.2nzjhpr.mongodb.net/";
+require("dotenv").config();
+
+const MONGODB_URI = process.env.URL_MONGODB;
+
+const urlDatabase = MONGODB_URI;
 const connect = async () => {
   try {
     let connection = await mongoose.connect(urlDatabase);
