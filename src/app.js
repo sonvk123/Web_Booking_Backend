@@ -68,5 +68,4 @@ app.use("/", TransactionRoute);
 
 app.listen(PORT ?? 5000, async (req, res) => {
   await connect();
-  console.log("đã kết nối tới cổng : ", PORT);
 });

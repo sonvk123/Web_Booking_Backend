@@ -1,7 +1,6 @@
 const { ObjectId } = require("mongodb");
 
 const Hotel = require("../../models/HotelModel");
-const TransactionModel = require("../../models/TransactionModel");
 
 // lấy danh sách hotels
 exports.getHotels = async (req, res) => {
@@ -150,7 +149,6 @@ exports.postEditHotelId = async (req, res) => {
     const roomsArr = rooms.split("\n").filter((url) => url.trim() !== "");
     const imagesArr = images.split("\n").filter((url) => url.trim() !== "");
 
-    console.log("rooms:", rooms);
     await Hotel.updateOne(
       { _id: hotelId },
       {
