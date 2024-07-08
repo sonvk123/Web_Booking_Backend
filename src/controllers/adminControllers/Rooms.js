@@ -55,7 +55,7 @@ exports.getAddRoom = async (req, res) => {
 exports.postAddRoom = async (req, res) => {
   try {
     const data = req.body;
-    const hotelId = data.hotelName;
+    const hotelId = data.hotelId;
     const title = data.title;
     const price = data.price;
     const description = data.description;
@@ -134,7 +134,6 @@ exports.postDeleteRoom = async (req, res) => {
   //     })
   //   );
 
-
   //   if (test) {
   //     // await Room.deleteOne({ _id: new ObjectId(roomId) });
   //     const hotels = await Hotel.find();
@@ -192,8 +191,7 @@ exports.getRoomId = async (req, res) => {
 exports.postEditRoomId = async (req, res) => {
   try {
     const roomId = req.body.roomId;
-    const { title, description, price, maxPeople, rooms } =
-      req.body.data;
+    const { title, description, price, maxPeople, rooms } = req.body.data;
 
     const roomsArr = rooms.split("\n").filter((url) => url.trim() !== "");
 

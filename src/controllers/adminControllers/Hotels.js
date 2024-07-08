@@ -122,6 +122,7 @@ exports.postHotelId = async (req, res) => {
   try {
     const hotelId = req.body.id;
     const hotel = await Hotel.find({ _id: hotelId });
+
     res.status(200).send({ message: "Lấy hotel thàng công", data: hotel });
   } catch (err) {
     res.status(500).send({ message: "Lấy hotel thất bại" });
@@ -149,6 +150,7 @@ exports.postEditHotelId = async (req, res) => {
     const roomsArr = rooms.split("\n").filter((url) => url.trim() !== "");
     const imagesArr = images.split("\n").filter((url) => url.trim() !== "");
 
+    console.log("rooms:", rooms);
     await Hotel.updateOne(
       { _id: hotelId },
       {
